@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 USER root
 WORKDIR /root
 
-COPY ENTRYPOINT.sh /
+#COPY ENTRYPOINT.sh /
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -24,6 +24,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && touch /etc/network/interfaces \
  && chmod +x /ENTRYPOINT.sh
 
-EXPOSE 6633 6653 6640
+#EXPOSE 6633 6653 6640
 
-ENTRYPOINT ["/ENTRYPOINT.sh"]
+#ENTRYPOINT ["/ENTRYPOINT.sh"]
